@@ -1,0 +1,86 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+DATASET_LABEL	DUF4229 co-occurrence
+COLOR	#c0392b
+STRIP_WIDTH	40
+MARGIN	5
+BORDER_WIDTH	1
+BORDER_COLOR	#ffffff
+LEGEND_TITLE	DUF4229 in genomic neighborhood
+LEGEND_SHAPES	1	1
+LEGEND_COLORS	#c0392b	#dddddd
+LEGEND_LABELS	present	absent
+DATA
+A0A941INH0_Actinospica	#c0392b	present
+A0ABY7JTD4_Jatrophihabitans	#c0392b	present
+A0ABV9VXV0_Dactylosporangium	#c0392b	present
+A0A895YHM7_Natronosporangium	#c0392b	present
+A0ABX0XRR0_Planosporangium	#c0392b	present
+A0A2T0S7F3_Pseudosporangium	#c0392b	present
+A0ABZ1K856_Kitasatospora	#c0392b	present
+A0ABT5Z863_Streptantibioticus	#c0392b	present
+A0ABP9BHD0_Streptomyces	#c0392b	present
+A0AA41Q1E7_Yinghuangia	#c0392b	present
+A0A561WS35_?	#c0392b	present
+A0A3D9ZIS6_Asanoa	#c0392b	present
+A0ACH2YYM7_Peterkaempfera	#c0392b	present
+A0ABV8LF65_Hamadaea	#c0392b	present
+A0ABV7PUZ4_Glycomyces	#c0392b	present
+A0ABV8U3K5_Salininema	#c0392b	present
+A0ABX1A271_Actinacidiphila	#c0392b	present
+A0A562UR62_Stackebrandtia	#c0392b	present
+A0A545AU83_Cryptosporangium	#c0392b	present
+A0A895XVQ2_Natronoglycomyces	#c0392b	present
+A0A8J7WHA8_Actinocrinis	#c0392b	present
+A0ABS2ADV0_Paractinoplanes	#c0392b	present
+A0ABS7BAQ6_Actinoplanes	#c0392b	present
+A0ABV3DRW3_Streptodolium	#c0392b	present
+A0A931FEU5_Streptacidiphilus	#c0392b	present
+A0A0S4QFI5_Parafrankia	#c0392b	present
+A0A9X7PGX5_Streptosporangium	#c0392b	present
+A0ABW1HJ04_Micromonospora	#c0392b	present
+A0A8J4H4B8_Xylanibacillus	#dddddd	absent
+A0A9X1SMM8_Blastopirellula	#dddddd	absent
+A0ABW0U7E7_Aliibacillus	#dddddd	absent
+A0A562R8V5_Desulfobotulus	#dddddd	absent
+A0A4R1BS24_Rubrobacter	#dddddd	absent
+A0AAU8PT60_Desulfofundulus	#dddddd	absent
+A0A550JBX9_Trichloromonas	#dddddd	absent
+A0A517PDL8_Alienimonas	#dddddd	absent
+A0A4R3L9X0_Hazenella	#dddddd	absent
+Q39Q71_Geobacter	#dddddd	absent
+A0ABV6HKF9_Olivibacter	#dddddd	absent
+A0AA35SSA2_Geodia	#dddddd	absent
+A0ACG1X2D9_Paracidobacterium	#dddddd	absent
+A0ABS4JQG9_Symbiobacterium	#dddddd	absent
+A0A841PQU2_Geomicrobium	#dddddd	absent
+A0ABX6NH75_Oceanidesulfovibrio	#dddddd	absent
+A0A1I7NH55_Thermoflavifilum	#dddddd	absent
+A0A8J6QKS6_Pelovirga	#dddddd	absent
+A0A1H9WSN0_Salisediminibacterium	#dddddd	absent
+A0A428ME43_?	#dddddd	absent
+A0A9J7BN92_Occallatibacter	#dddddd	absent
+A0A1X4XX03_Desulfurella	#dddddd	absent
+A0A1M6HKK5_Malonomonas	#dddddd	absent
+A0A6I0F709_Heliorestis	#dddddd	absent
+A0A4R4E406_Flaviaesturariibacter	#dddddd	absent
+A0A7G6E5H6_Thermanaerosceptrum	#dddddd	absent
+V2QFD7_Mucispirillum	#dddddd	absent
+A0A8T4HA51_Rhinopithecimicrobium	#dddddd	absent
+A0ABP9IH59_Yinghuangia	#dddddd	absent
+A0A8J2UCM8_Puia	#dddddd	absent
+A0A518E0Y4_Lignipirellula	#dddddd	absent
+F0SNR2_Rubinisphaera	#dddddd	absent
+A0AAU0UN12_Metallumcola	#dddddd	absent
+A0A7W9SKG8_Armatimonas	#dddddd	absent
+A0A6V8M1R8_Fundidesulfovibrio	#dddddd	absent
+A0A7W1XSE6_Thermoactinomyces	#dddddd	absent
+A0A8J4DJT6_Spirilliplanes	#dddddd	absent
+A0A6N9TXK3_Dissulfurirhabdus	#dddddd	absent
+A0A1I1KKJ2_Parapedobacter	#dddddd	absent
+A0A285MZ90_Persephonella	#dddddd	absent
+A0A6M4IME5_Gemmatimonas	#dddddd	absent
+A0ABX8B498_Chloracidobacterium	#dddddd	absent
+E6W556_Desulfurispirillum	#dddddd	absent
+A1HQ52_Thermosinus	#dddddd	absent
+A0A6N9PZC2_Chengkuizengella	#dddddd	absent

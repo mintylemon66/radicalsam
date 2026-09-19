@@ -1,0 +1,6 @@
+pfam	label	n	raw_r	partial_r	p	r_family_vs_taxonomy
+PF14012	DUF4229 (candidate)	339	0.2909	0.1551	0.0001	0.494
+PF00583	Acetyltransf_1 (control)	201	0.1895	0.1834	0.0001	0.078
+PF01037	AsnC_trans_reg (control)	248	0.2265	0.1712	0.0001	0.264
+PF01040	UbiA (control)	187	0.1476	0.1328	0.0001	0.105
+PF02441	Flavoprotein (control)	230	0.1323	0.126	0.0001	0.046

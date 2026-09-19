@@ -1,0 +1,15 @@
+pair	iptm	lis	clis	role
+barnase-barstar	0.920	0.759	0.916	positive control
+MqnE + MqnC (actinobacterial)	0.870	0.486	0.765	candidate complex
+MqnE + MqnC (archaeal)	0.868	0.460	0.850	candidate complex, second lineage
+MqnE + BioB	0.180	0.000	0.000	same-fold homology control
+MqnE + DUF4229 (organism 1)	0.120	0.000	0.000	candidate accessory
+MqnE + DUF4229 (organism 2)	0.160	0.000	0.000	candidate accessory
+MqnE + DUF4229 (organism 3)	0.190	0.000	0.000	candidate accessory
+MqnE + DUF4229 soluble tail (1)	0.190	0.000	0.000	soluble-construct control
+MqnE + DUF4229 soluble tail (2)	0.200	0.000	0.000	soluble-construct control
+MqnE + DUF4229 soluble tail (3)	0.190	0.000	0.000	soluble-construct control
+MqnE + GFP	0.130	0.000	0.000	negative control
+MqnE + reductase	0.100	0.000	0.000	screened neighbor
+MqnE + prenyltransferase	0.110	0.000	0.000	screened neighbor
+MqnE + DUF4240	0.090	0.000	0.000	screened neighbor
