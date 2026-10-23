@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""Figure 1. DUF4229 co-occurrence across radical SAM families, Actinomycetota only.
+Input : results/duf4229_cross_family_specificity.tsv
+Output: latex/figures/fig_specificity.png
+"""
 import csv, os
 import matplotlib.pyplot as plt
 

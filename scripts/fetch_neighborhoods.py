@@ -4,15 +4,16 @@ import pandas as pd
 from Bio import Entrez
 import urllib.error
 
+# --- Configuration ---
 Entrez.email = "mintyl@bu.edu"  # NCBI requires an email to use their API
 INPUT_FILE = "data/raw_neighborhoods.txt"
 OUTPUT_FILE = "data/neighborhood_genes.tsv"
-BATCH_SIZE = 100  # contigs per Entrez request
+BATCH_SIZE = 100  # Number of contigs to query simultaneously
 
-import http.client
+import http.client # Add this to the very top of your file with the other imports!
 
 def fetch_ncbi_features_batch(contig_ids, max_retries=3):
-    """Fetch feature tables, retrying when the connection drops."""
+    """Fetches feature tables with an automatic retry loop for dropped connections."""
     id_string = ",".join(contig_ids)
     
     for attempt in range(max_retries):
@@ -36,7 +37,7 @@ def fetch_ncbi_features_batch(contig_ids, max_retries=3):
     return ""
 
 def parse_feature_tables(raw_text):
-    """Parse NCBI multi-record feature table text."""
+    """Parses NCBI's multi-record feature table text, safely ignoring prefixes and tab counts."""
     if not raw_text.strip():
         return {}
         
@@ -48,16 +49,16 @@ def parse_feature_tables(raw_text):
             continue
         lines = record.splitlines()
         
-        # strip gb| / ref| prefixes and trailing pipes from the header
+        # 1. Clean the NCBI Header (Strips 'gb|', 'ref|', and trailing pipes)
         raw_id = lines[0].split()[0]
         if "|" in raw_id:
             parts = raw_id.split("|")
-            # header is usually db|accession|
+            # Usually formatted as db|accession| -> grab the accession
             raw_id = parts[1] if len(parts) > 1 else parts[0]
             
-        clean_first_line = raw_id.split(".")[0]  # drop the version suffix
+        clean_first_line = raw_id.split(".")[0] # Clean the version numbers
         
-        # protein IDs, tolerant of tab vs space differences
+        # 2. Safely extract protein IDs (Ignores exact tab/space formatting)
         genes = []
         for line in lines:
             if "protein_id" in line:
@@ -72,6 +73,7 @@ def parse_feature_tables(raw_text):
 def main():
     print("--- Roadmap B, Step 1: Bulk Batch Neighborhood Extraction ---")
     
+    # 1. Load the data safely
     try:
         df = pd.read_csv(INPUT_FILE, sep="\t")
         print(f"[INFO] Loaded {len(df)} genomic contigs.")
@@ -83,12 +85,14 @@ def main():
     total_records = len(valid_contigs)
     print(f"[INFO] Found {total_records} valid contigs processing...")
     
-    # strip version numbers so the lookups match
+    # Clean version numbers for dictionary lookups
     valid_contigs['Clean_Contig'] = valid_contigs['Genomic_Contig_ID'].str.strip().str.split('.').str[0]
     
+    # 2. Open output file once and write headers
     with open(OUTPUT_FILE, "w") as out_file:
         out_file.write("Radical_SAM_ID\tGenomic_Contig_ID\tNeighbor_Genes\n")
         
+        # 3. Loop through the entire dataset in blocks of BATCH_SIZE
         for start_idx in range(0, total_records, BATCH_SIZE):
             chunk = valid_contigs.iloc[start_idx : start_idx + BATCH_SIZE]
             contig_list = chunk['Clean_Contig'].tolist()
@@ -97,10 +101,10 @@ def main():
             
             raw_features = fetch_ncbi_features_batch(contig_list)
             
-            # if a whole batch fails, keep what parsed and mark the rest empty
+            # If a batch fails entirely, parse what we can or mark as empty
             parsed_neighborhoods = parse_feature_tables(raw_features) if raw_features else {}
             
-            # write each batch as soon as it finishes
+            # 4. Write this chunk's results immediately to disk
             for index, row in chunk.iterrows():
                 clean_c = row['Clean_Contig']
                 orig_c = row['Genomic_Contig_ID']
@@ -111,7 +115,7 @@ def main():
                 
                 out_file.write(f"{rs_id}\t{orig_c}\t{gene_str}\n")
             
-            # NCBI allows 3 requests per second
+            # NCBI rate limiting precaution (3 requests per second max allowed)
             time.sleep(0.4)
             
     print(f"\n[SUCCESS] Bulk extraction complete! All entries processed in {OUTPUT_FILE}")

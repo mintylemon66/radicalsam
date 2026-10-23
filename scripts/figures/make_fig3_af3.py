@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""Figure. AlphaFold 3 interface scores for every co-folded pair.
+Input : results/af3_interface_scores.tsv
+Output: latex/figures/fig_af3.png
+"""
 import csv, os
 import matplotlib.pyplot as plt
 

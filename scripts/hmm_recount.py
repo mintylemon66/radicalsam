@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 """
-Count DUF4229 in the neighborhoods from sequence, using HMMER against PF14012 at the
-Pfam gathering threshold, and compare those calls with the GenBank product names. The
-refetched neighborhoods span 25 kb on each side, so this also measures how far DUF4229
-sits from the query gene and whether the wider window changes any genome's call.
+Audit 1 (core): recall DUF4229 membership from SEQUENCE (HMMER vs PF14012)
+instead of from GenBank product-name text, and compare the two.
+
+Also answers Audit 3 (window/distance), because the refetched neighborhoods
+span +/-25 kb rather than the original +/-8 kb:
+  - how far from the query CDS do DUF4229 genes actually sit?
+  - do genomes scored NEGATIVE under the original window become POSITIVE
+    when the window is widened?
+
+Uses the Pfam-curated gathering threshold (--cut_ga), the standard criterion
+for family assignment, rather than an arbitrary E-value.
+
+Read-only apart from writing report files into audit/.
 """
 import csv
 import os
@@ -69,9 +78,9 @@ def main():
     for r in rows:
         genomes.setdefault(r["query_acc"], r["group"])
 
-    label_pos = defaultdict(bool)  # DUF4229 by product name
-    hmm_pos_wide = defaultdict(bool)  # DUF4229 by HMM within 25 kb
-    hmm_pos_orig = defaultdict(bool)  # DUF4229 by HMM within the original window
+    label_pos = defaultdict(bool)      # genome -> DUF4229 by TEXT (any window)
+    hmm_pos_wide = defaultdict(bool)   # genome -> DUF4229 by HMM, +/-25kb
+    hmm_pos_orig = defaultdict(bool)   # genome -> DUF4229 by HMM, within orig window
     prot_label = set()
     prot_hmm = set()
     dists = []                         # (group, bp_gap, gene_index, by_label)
@@ -102,21 +111,21 @@ def main():
                 hmm_pos_orig[acc] = True
             dists.append((g, gap, gi, is_label))
 
-    # protein-level agreement between product name and HMM
+    # ---------------- protein-level confusion ----------------
     both = prot_label & prot_hmm
     only_label = prot_label - prot_hmm
     only_hmm = prot_hmm - prot_label
     print("=" * 70)
-    print("Protein level: product name vs HMM calls")
+    print("PROTEIN-LEVEL: text label vs sequence (HMM) agreement")
     print("=" * 70)
-    print(f"  DUF4229 by both name and HMM        : {len(both)}")
-    print(f"  DUF4229 by name only                : {len(only_label)}   possible false positives")
-    print(f"  DUF4229 by HMM only                 : {len(only_hmm)}   missed by the name search")
+    print(f"  called DUF4229 by BOTH text and HMM : {len(both)}")
+    print(f"  text says DUF4229, HMM does NOT     : {len(only_label)}   <- false positives?")
+    print(f"  HMM says DUF4229, text does NOT     : {len(only_hmm)}   <- MISSED by text search")
     if prot_hmm:
         rec = 100.0 * len(both) / len(prot_hmm)
-        print(f"  name-search recall against HMM       : {rec:.1f}%")
+        print(f"  text-search recall vs sequence truth : {rec:.1f}%")
 
-    # genome-level counts
+    # ---------------- genome-level contingency ----------------
     def tally(fn):
         t = {"mqn": [0, 0], "bg": [0, 0]}   # [positive, total]
         for acc, grp in genomes.items():
@@ -128,7 +137,7 @@ def main():
         return t
 
     print("\n" + "=" * 70)
-    print("Genome level: DUF4229 presence by method")
+    print("GENOME-LEVEL: DUF4229 presence by method")
     print("=" * 70)
     print(f"{'method':<34}{'target (mqn)':<20}{'background (bg)':<20}")
     for name, fn in (("text label (any window)", label_pos),
@@ -140,11 +149,11 @@ def main():
         bs = f"{b[0]}/{b[1]} = {100.0*b[0]/b[1]:.2f}%" if b[1] else "n/a"
         print(f"{name:<34}{ms:<20}{bs:<20}")
 
-    # Fisher test on the HMM calls
+    # ---------------- Fisher on the sequence-based calls ----------------
     try:
         from scipy.stats import fisher_exact
         print("\n" + "=" * 70)
-        print("Fisher's exact test (one-sided) on the HMM calls")
+        print("FISHER'S EXACT (one-sided), sequence-based calls")
         print("=" * 70)
         for name, fn in ((f"HMM original window", hmm_pos_orig),
                          ("HMM wide window", hmm_pos_wide)):
@@ -161,9 +170,9 @@ def main():
     except ImportError:
         print("(scipy unavailable; skipping Fisher)")
 
-    # how far DUF4229 sits from the query gene
+    # ---------------- distance distribution (Audit 3) ----------------
     print("\n" + "=" * 70)
-    print("Distance of DUF4229 from the query radical SAM gene (HMM hits)")
+    print("DISTANCE OF DUF4229 FROM THE QUERY RADICAL SAM GENE (HMM hits)")
     print("=" * 70)
     if dists:
         bybp = sorted(d[1] for d in dists if d[1] is not None)
@@ -174,7 +183,7 @@ def main():
             print(f"  bp gap  min={bybp[0]}  p25={pct(.25)}  median={pct(.5)}  "
                   f"p75={pct(.75)}  max={bybp[-1]}")
             beyond = sum(1 for x in bybp if x > ORIG_BP)
-            print(f"  beyond the original {ORIG_BP} bp window: {beyond}/{len(bybp)} "
+            print(f"  BEYOND the original {ORIG_BP} bp window: {beyond}/{len(bybp)} "
                   f"({100.0*beyond/len(bybp):.1f}%)  <- invisible to the original run")
         gis = sorted(d[2] for d in dists if d[2] is not None)
         if gis:
@@ -185,7 +194,7 @@ def main():
                 if abs(k) <= 25:
                     print(f"    {k:>+4} | {'#' * min(60, c[k])} {c[k]}")
 
-    # write the summary table
+    # write machine-readable summary
     out = os.path.join(AUD, "audit1_summary.tsv")
     with open(out, "w", newline="") as fh:
         w = csv.writer(fh, delimiter="\t")

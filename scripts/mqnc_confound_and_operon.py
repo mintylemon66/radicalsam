@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 """
-Check whether the DUF4229 signal near MqnC comes from an MqnE in the same operon, then
-measure how often DUF4229 and the futalosine gene sit on the same strand across every pair.
+Two checks on existing data, no network needed.
+
+(A) MqnC confound. MqnC and MqnE are both futalosine-pathway enzymes and may
+    sit in the same operon. If so, a DUF4229 that is genuinely partnered with
+    MqnE would also fall inside an MqnC neighborhood, manufacturing a spurious
+    MqnC signal. Test: among DUF4229-positive MqnC genomes, how many ALSO have
+    an MqnE (or a futalosine radical SAM gene) inside the same window?
+
+(B) Operon / co-transcription at scale. The paper's co-transcription claim
+    rests on 12 of 12 organisms being same-strand. We now have strand and
+    coordinates for hundreds of DUF4229-MqnE pairs, so the claim can be
+    measured properly rather than asserted from a handful.
 """
 import csv
 import os
@@ -70,9 +80,9 @@ def main():
         gi = int(gi) if gi not in ("", None) else 0
         return gap <= ORIG_BP and abs(gi) <= ORIG_GENES
 
-    # MqnC confound
+    # ---------- (A) MqnC confound ----------
     print("=" * 72)
-    print("MqnC confound: is the MqnC signal just a nearby MqnE?")
+    print("(A) MqnC CONFOUND: is the MqnC signal just co-located MqnE?")
     print("=" * 72)
     mqnc_pos, mqnc_pos_with_fut = [], []
     for acc, rows in rows_by_genome.items():
@@ -89,18 +99,18 @@ def main():
             mqnc_pos_with_fut.append(acc)
     n, k = len(mqnc_pos), len(mqnc_pos_with_fut)
     print(f"  DUF4229-positive MqnC genomes                : {n}")
-    print(f"  ...that also contain a futalosine gene nearby: {k}"
+    print(f"  ...that ALSO contain a futalosine gene nearby: {k}"
           + (f"  ({100.0*k/n:.1f}%)" if n else ""))
     if n and k / n > 0.8:
-        print("  -> The MqnC signal is mostly explained by a nearby MqnE.")
-        print("     DUF4229 goes with MqnE, and MqnC picks it up only by proximity.")
+        print("  -> The MqnC signal is largely EXPLAINED by co-located MqnE.")
+        print("     DUF4229 partners MqnE; MqnC scores positive only by proximity.")
     elif n:
         print("  -> A substantial share of MqnC-positive genomes lack a nearby")
         print("     futalosine gene, so the MqnC signal is not purely proximity.")
 
-    # same-strand rate across all DUF4229 pairs
+    # ---------- (B) operon strand at scale ----------
     print("\n" + "=" * 72)
-    print("Operon strand across all DUF4229 pairs")
+    print("(B) OPERON / CO-TRANSCRIPTION AT SCALE (paper asserts 12/12 same-strand)")
     print("=" * 72)
     same = diff = 0
     gaps = []
@@ -130,7 +140,7 @@ def main():
     tot = same + diff
     print(f"  DUF4229-radicalSAM pairs measured : {tot}")
     if tot:
-        print(f"  same strand                       : {same} ({100.0*same/tot:.1f}%)")
+        print(f"  SAME strand                       : {same} ({100.0*same/tot:.1f}%)")
         print(f"  opposite strand                   : {diff} ({100.0*diff/tot:.1f}%)")
     ta = same_act + diff_act
     if ta:
@@ -142,7 +152,7 @@ def main():
         close = sum(1 for g in gaps if g <= 200)
         print(f"  gap <= 200 bp (typical operon spacing): {close}/{len(gaps)} "
               f"({100.0*close/len(gaps):.1f}%)")
-    # binomial test against a 50% null
+    # binomial sanity: same-strand rate vs 50% null
     if tot:
         try:
             from scipy.stats import binomtest

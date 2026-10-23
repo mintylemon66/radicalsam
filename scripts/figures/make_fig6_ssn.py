@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+"""Figure. Sequence similarity network of futalosine radical SAM enzymes.
+Inputs : results/ssn_nodes.tsv, results/ssn_edges.tsv
+Output : latex/figures/fig_ssn.png
+Node and edge tables are the delivered network at a bit-score threshold of 380.
+"""
 import csv, os
 import networkx as nx
 import matplotlib.pyplot as plt

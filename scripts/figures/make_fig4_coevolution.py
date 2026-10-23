@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""Figure 4. Mantel co-evolution correlation, candidate against control families.
+Input : results/coevo_panel.tsv
+Output: latex/figures/fig_coevolution.png
+"""
 import csv, os
 import numpy as np
 import matplotlib.pyplot as plt

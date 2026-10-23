@@ -1,6 +1,7 @@
 import sys
 from Bio import SeqIO
 
+# --- Configuration ---
 INPUT_FASTA = "data/raw_search_hits.fasta" 
 OUTPUT_FASTA = "data/radical_SAM_nr.fasta"
 EXPECTED_LENGTH = 350                
@@ -17,7 +18,7 @@ def filter_quality_sequences():
         for record in SeqIO.parse(INPUT_FASTA, "fasta"):
             total_count += 1
             
-            # keep sequences at least 80% of the expected length
+            # Isolate sequences meeting structural completeness requirements
             if len(record.seq) >= LENGTH_THRESHOLD:
                 filtered_records.append(record)
                 passed_count += 1
