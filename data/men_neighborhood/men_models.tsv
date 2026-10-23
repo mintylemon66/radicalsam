@@ -1,0 +1,28 @@
+gene	model	name	gathering_threshold	description
+MenA	TIGR00751.1	menA	102.15	1,4-dihydroxy-2-naphthoate octaprenyltransferase
+MenA	NF004751.0	PRK06080.1-3	264.0	1,4-dihydroxy-2-naphthoate polyprenyltransferase (PRK06080)
+MenA	NF004752.0	PRK06080.1-4	289.0	1,4-dihydroxy-2-naphthoate polyprenyltransferase (PRK06080, Bacteria)
+MenE	TIGR01923.1	menE	330.15	o-succinylbenzoate--CoA ligase
+MenE	NF005877.1	PRK07824.1	345.0	o-succinylbenzoate--CoA ligase (PRK07824)
+MenE	NF002966.0	PRK03640.1	556.0	o-succinylbenzoate--CoA ligase (PRK03640)
+MenB	TIGR01929.1	menB	342.7	1,4-dihydroxy-2-naphthoyl-CoA synthase
+MenB	NF006186.0	PRK08321.1	378.0	1,4-dihydroxy-2-naphthoyl-CoA synthase (PRK08321)
+MenB	NF005637.0	PRK07396.1	380.0	1,4-dihydroxy-2-naphthoyl-CoA synthase (PRK07396)
+MenD	TIGR00173.1	menD	244.2	SEPHCHC synthase
+MenC	TIGR01927.1	menC_gam_Gplu	130.55	o-succinylbenzoate synthase (gamma-proteobacteria and Gram-positive type)
+MenC	TIGR01928.1	menC_lowGC_arch	200.65	o-succinylbenzoate synthase (low GC and archaeal type)
+MenC	NF002782.0	PRK02901.1	288.0	o-succinylbenzoate synthase (PRK02901)
+MenC	NF002739.0	PRK02714.1	259.0	o-succinylbenzoate synthase (PRK02714)
+MenF	TIGR00543.1	isochor_syn	224.75	isochorismate synthase
+MenH	TIGR03695.1	menH_SHCHC	208.55	SHCHC synthase
+MenG	TIGR01934.1	MenG_MenH_UbiE	158.35	ubiquinone/menaquinone biosynthesis methyltransferase
+MenG	NF001240.0	PRK00216.1-1	378.0	UbiE/MenG methyltransferase (PRK00216.1-1)
+MenG	NF001241.0	PRK00216.1-2	327.0	demethylmenaquinone methyltransferase (PRK00216.1-2)
+MenG	NF001242.0	PRK00216.1-3	351.0	UbiE/MenG methyltransferase (PRK00216.1-3)
+MenG	NF001243.0	PRK00216.1-4	235.0	demethylmenaquinone methyltransferase (PRK00216.1-4)
+MenG	NF001244.0	PRK00216.1-5	216.0	UbiE/MenG methyltransferase (PRK00216.1-5)
+MenJ	NF045655.1	MkRedMenJ	700.0	menaquinone reductase MenJ (Mycobacteriaceae)
+MqnP	NF041584.1	MqnP_SCO4491	420.0	futalosine-branch prenyltransferase MqnP (Actinomycetes)
+MqnE	TIGR03700.1	mena_SCO4494	434.55	aminofutalosine synthase MqnE
+MqnC	TIGR03699.1	menaquin_MqnC	428.1	cyclic dehypoxanthinyl futalosine synthase MqnC
+UbiA	PF01040.24	UbiA	34.2	Pfam UbiA prenyltransferase family (context, not a men call)

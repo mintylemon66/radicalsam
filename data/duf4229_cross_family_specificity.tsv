@@ -1,0 +1,12 @@
+# DUF4229 (PF14012) co-occurrence across separate radical SAM gene families
+# Detection: HMMER PF14012 at Pfam gathering threshold (GA=27) on reconstructed neighbourhoods.
+# Sources: audit/pfam_wide.domtbl (MqnE/MqnC/bg), audit/pfam_wide_generalize.domtbl (BioB/LipA).
+# window = operonic +/-8 kb (bp_gap <= 8000); actino = Actinomycetota per data/metadata_org.tsv
+family	all_genomes_denom	all_genomes_DUF4229pos	all_rate_pct	actino_denom	actino_DUF4229pos	actino_rate_pct
+MqnE	1733	284	16.39	329	280	85.11
+MqnC	1915	58	3.03	566	55	9.72
+background_radicalSAM	1211	0	0.00	212	0	0.00
+BioB_biotin_synthase	1345	0	0.00	259	0	0.00
+LipA_lipoyl_synthase	1439	0	0.00	300	0	0.00
+# Fisher (actino-only, one-sided): MqnE vs BioB p=4.9e-117; vs LipA p=5.2e-128; vs bg p=4.7e-103
+# Pooled: MqnE 280/329 vs 0/771 actinobacterial non-MqnE radical SAM (bg+BioB+LipA), p=3.0e-211

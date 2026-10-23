@@ -1,0 +1,37 @@
+genome_class	genomes	gene	duf_windows_with_gene	duf_windows	control_windows_with_gene	control_windows	fisher_log10_p	matched_log10_p
+classical (MenD and MenB)	2035	MenA	1680	2056	17	9491	-1615.0	-1203.0
+classical (MenD and MenB)	2035	MenE	720	2056	91	9491	-475.0	-447.5
+classical (MenD and MenB)	2035	MenB	937	2056	80	9491	-680.0	-590.0
+classical (MenD and MenB)	2035	MenD	778	2056	101	9491	-516.1	-459.2
+classical (MenD and MenB)	2035	any_classical	1918	2056	318	9491	-1641.1	-1266.1
+classical (MenD and MenB)	2035	MqnE	0	2056	0	9491	0.0	0.0
+classical (MenD and MenB)	2035	MqnC	0	2056	0	9491	0.0	0.0
+classical (MenD and MenB)	2035	MqnP	0	2056	0	9491	0.0	0.0
+classical (MenD and MenB)	2035	UbiA	1681	2056	97	9491	-1496.0	-1172.3
+MenD or MenB only	114	MenA	109	114	0	489	-114.2	-75.7
+MenD or MenB only	114	MenE	20	114	1	489	-13.8	-10.7
+MenD or MenB only	114	MenB	63	114	0	489	-53.5	-42.6
+MenD or MenB only	114	MenD	50	114	1	489	-39.2	-34.9
+MenD or MenB only	114	any_classical	110	114	4	489	-109.4	-75.1
+MenD or MenB only	114	MqnE	0	114	0	489	0.0	0.0
+MenD or MenB only	114	MqnC	0	114	0	489	0.0	0.0
+MenD or MenB only	114	MqnP	0	114	0	489	0.0	0.0
+MenD or MenB only	114	UbiA	109	114	8	489	-102.4	-73.4
+neither, futalosine genes present	55	MenA	0	57	0	236	0.0	0.0
+neither, futalosine genes present	55	MenE	0	57	0	236	0.0	0.0
+neither, futalosine genes present	55	MenB	0	57	0	236	0.0	0.0
+neither, futalosine genes present	55	MenD	0	57	0	236	0.0	0.0
+neither, futalosine genes present	55	any_classical	2	57	7	236	-0.3	-0.3
+neither, futalosine genes present	55	MqnE	2	57	0	236	-1.4	-1.6
+neither, futalosine genes present	55	MqnC	2	57	8	236	-0.2	-0.3
+neither, futalosine genes present	55	MqnP	21	57	2	236	-14.2	-13.6
+neither, futalosine genes present	55	UbiA	21	57	3	236	-13.3	-13.4
+neither	1	MenA	0	1	0	5	0.0	0.0
+neither	1	MenE	0	1	0	5	0.0	0.0
+neither	1	MenB	0	1	0	5	0.0	0.0
+neither	1	MenD	0	1	0	5	0.0	0.0
+neither	1	any_classical	0	1	0	5	0.0	0.0
+neither	1	MqnE	0	1	0	5	0.0	0.0
+neither	1	MqnC	0	1	0	5	0.0	0.0
+neither	1	MqnP	0	1	0	5	0.0	0.0
+neither	1	UbiA	0	1	0	5	0.0	0.0
