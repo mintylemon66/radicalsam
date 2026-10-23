@@ -1,0 +1,137 @@
+[2026-10-18 12:15:59] stage 1: neighborhood families for the eight training systems
+biotin         400 anchor loci sampled, 399 placed on their contig
+lipoyl         400 anchor loci sampled, 400 placed on their contig
+pqq            400 anchor loci sampled, 400 placed on their contig
+mycofactocin   400 anchor loci sampled, 400 placed on their contig
+molybdopterin  400 anchor loci sampled, 398 placed on their contig
+thiamine       400 anchor loci sampled, 398 placed on their contig
+pfl            400 anchor loci sampled, 399 placed on their contig
+queuosine      400 anchor loci sampled, 400 placed on their contig
+60,982 neighbor proteins to map to UniProt
+  mapped 60,982 of 60,982 protein IDs
+60,933 neighbor proteins found in UniProtKB
+biotin         211 families in >= 2% of windows, 89 with at most 50,000 UniProt proteins
+lipoyl         247 families in >= 2% of windows, 130 with at most 50,000 UniProt proteins
+pqq            176 families in >= 2% of windows, 73 with at most 50,000 UniProt proteins
+mycofactocin   156 families in >= 2% of windows, 78 with at most 50,000 UniProt proteins
+molybdopterin  235 families in >= 2% of windows, 111 with at most 50,000 UniProt proteins
+thiamine       160 families in >= 2% of windows, 89 with at most 50,000 UniProt proteins
+pfl            246 families in >= 2% of windows, 104 with at most 50,000 UniProt proteins
+queuosine      225 families in >= 2% of windows, 94 with at most 50,000 UniProt proteins
+downloading gene lists for 652 families (ones already on disk are skipped)
+  gene lists: 20 of 652
+  gene lists: 40 of 652
+  gene lists: 60 of 652
+  gene lists: 80 of 652
+  gene lists: 100 of 652
+  gene lists: 120 of 652
+  gene lists: 140 of 652
+  PF01814 retry 1: [Errno 54] Connection reset by peer
+  PF01809 retry 1: [Errno 54] Connection reset by peer
+  PF01734 retry 1: [Errno 54] Connection reset by peer
+  PF01799 retry 1: [Errno 54] Connection reset by peer
+  gene lists: 160 of 652
+  gene lists: 180 of 652
+  gene lists: 200 of 652
+  gene lists: 220 of 652
+  gene lists: 240 of 652
+  gene lists: 260 of 652
+  gene lists: 280 of 652
+  gene lists: 300 of 652
+  gene lists: 320 of 652
+  gene lists: 340 of 652
+  gene lists: 360 of 652
+  gene lists: 380 of 652
+  gene lists: 400 of 652
+  gene lists: 420 of 652
+  gene lists: 440 of 652
+  gene lists: 460 of 652
+  gene lists: 480 of 652
+  gene lists: 500 of 652
+  gene lists: 520 of 652
+  gene lists: 540 of 652
+  gene lists: 560 of 652
+  gene lists: 580 of 652
+  gene lists: 600 of 652
+  gene lists: 620 of 652
+  gene lists: 640 of 652
+  gene lists: 652 of 652
+[2026-10-18 15:37:43] stage 2: labels and the pair table
+biotin         3 positives, 89 neighborhood negatives
+lipoyl         1 positives, 130 neighborhood negatives
+pqq            4 positives, 73 neighborhood negatives
+mycofactocin   4 positives, 78 neighborhood negatives
+molybdopterin  5 positives, 111 neighborhood negatives
+thiamine       7 positives, 89 neighborhood negatives
+pfl            1 positives, 104 neighborhood negatives
+queuosine      3 positives, 94 neighborhood negatives
+
+28 positives and 768 negatives across 8 systems
+[2026-10-18 15:40:00] stage 3: score, retrain, evaluate, apply once to futalosine
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+biotin         scored 92 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+lipoyl         scored 131 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+pqq            scored 77 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+mycofactocin   scored 82 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+molybdopterin  scored 116 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+thiamine       scored 96 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+pfl            scored 105 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+queuosine      scored 97 candidates
+
+796 pairs, 28 of them partners, across 8 systems
+
+neighborhood benchmark, AUROC pooled / mean within system
+  retrained, leave one system out: 0.435 / 0.565
+  first combiner (random negatives): 0.926 / 0.954
+
+per system, where the known partners rank among that system's candidates (retrained | first):
+  biotin          92 candidates | 44,44,44           | 2,4,12
+  lipoyl         131 candidates | 66                 | 3
+  molybdopterin  116 candidates | 58,58,58,58,58     | 4,6,8,9,29
+  mycofactocin    82 candidates | 42,42,42,42        | 1,2,4,5
+  pfl            105 candidates | 53                 | 2
+  pqq             77 candidates | 1,2,4,5            | 1,3,5,9
+  queuosine       97 candidates | 56,56,56           | 1,4,6
+  thiamine        96 candidates | 4,10,42,43,59,66,71 | 2,3,4,10,12,49,57
+
+coefficients of the retrained model:
+  (Intercept)       -71.328
+  GLMI               86.588
+  GLDistance        -15.866
+  PAJaccard         -15.351
+  PAOverlap         -20.104
+  GeneDistance       -3.770
+  MoransI          -203.821
+  OrientationMI     -33.995
+
+futalosine, held out: DUF4229 ranks 100 of 146 among DUF4229 plus the neighborhood families (p = 0.6849)
+  known gene MqnB       ranks 137 of 148 overall
+  known gene MqnA/MqnD  ranks 147 of 148 overall
+top of the list:
+   1. PF13459        Fer4_15                      0.000
+   2. PF08970        Sda                          0.000
+   3. PF00089        Trypsin                      0.000
+   4. PF02675        AdoMet_dc                    0.000
+   5. PF12832        MFS_1_like                   0.000
+   6. PF18146        CinA_KH                      0.000
+   7. PF13187        Fer4_9                       0.000
+   8. PF13434        Lys_Orn_oxgnase              0.000
+   9. PF06725        3D                           0.000
+  10. PF07833        Cu_amine_oxidN1              0.000
+[2026-10-18 16:10:39] finished
+exit: 0

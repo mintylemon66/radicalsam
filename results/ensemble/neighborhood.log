@@ -1,0 +1,26 @@
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+148 candidates scored: 145 neighborhood families, DUF4229, and the 2 known futalosine genes
+trained model: DUF4229 ranks 32 of 146 among DUF4229 plus the neighborhood families (p = 0.2192)
+
+top of the full list:
+   1. PF05572        Peptidase_M43                model 1.000
+   2. PF01521        Fe-S_biosyn                  model 0.999
+   3. PF13404        HTH_AsnC-type                model 0.997
+   4. PF02643        DUF192                       model 0.995
+   5. PF02441        Flavoprotein                 model 0.959
+   6. PF03167        UDG                          model 0.954
+   7. fam_PF02621    MqnA/MqnD                    model 0.952
+   8. PF20463        PDH_C                        model 0.915
+   9. PF01694        Rhomboid                     model 0.910
+  10. PF02153        PDH_N                        model 0.909
+
+DUF4229 rank among DUF4229 plus the neighborhood families, score by score:
+  GLMI           26
+  GLDistance     80
+  PAJaccard      80
+  PAOverlap      117
+  GeneDistance   2
+  MoransI        89
+  OrientationMI  1
+exit: 0

@@ -1,0 +1,55 @@
+{
+ "biotin": {
+  "bioA": "PF00202",
+  "bioD": "PF13500",
+  "bioF": "PF00155"
+ },
+ "lipoyl": {
+  "lipB": "PF21948"
+ },
+ "thiamine": {
+  "thiC": "PF01964",
+  "thiD": "PF08543",
+  "thiE": "PF02581",
+  "thiG": "PF05690",
+  "thiI": "PF02926",
+  "thiL": "PF00586",
+  "thiS": "PF02597"
+ },
+ "futalosine": {
+  "mqnA": "PF02621",
+  "mqnB": "PF01048"
+ },
+ "molybdopterin": {
+  "moaB": "PF00994",
+  "moaC": "PF01967",
+  "moaD": "PF02597",
+  "moaE": "PF02391",
+  "mogA": "PF00994",
+  "moeA": "PF00994",
+  "mobA": "PF12804"
+ },
+ "pqq": {
+  "pqqB": "PF12706",
+  "pqqC": "PF03070",
+  "pqqD": "PF05402",
+  "pqqF": "PF00675"
+ },
+ "mycofactocin": {
+  "mftB": "PF26520",
+  "mftD": "PF01070",
+  "mftE": "PF02633",
+  "mftF": "PF00535"
+ },
+ "hydrogenase": {
+  "hydG": "PF25601"
+ },
+ "queuosine": {
+  "queC": "PF06508",
+  "queD": "PF01242",
+  "queF": "PF14489"
+ },
+ "pfl": {
+  "pflB": "PF02901"
+ }
+}

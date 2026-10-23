@@ -1,0 +1,36 @@
+16025 proteomes; MqnE in 2226, DUF4229 in 3136; 287 random families in the 0.5-2x window, 145 MqnE-neighborhood families
+  MqnE: 2226 genomes, 2226 with MqnE, 2226 on MqnE's contig
+  MqnC: 2336 genomes, 2126 with MqnE, 1357 on MqnE's contig
+  DUF4229: 3136 genomes, 931 with MqnE, 902 on MqnE's contig
+  MqnAD: 2565 genomes, 2223 with MqnE, 1554 on MqnE's contig
+  Fer4: 12616 genomes, 1810 with MqnE, 927 on MqnE's contig
+EvoWeaver, phylogenetic profiles only
+  control MqnE-MqnC   Ensemble 0.999, component sum 2.446
+  control MqnE-MqnAD  Ensemble 0.999, component sum 2.581
+  control MqnE-Fer4   Ensemble 0.149, component sum 0.196
+  DUF4229 against 286 random Pfam families
+    Ensemble           DUF4229    0.255 | median    0.134, max    0.593 |  58 at or above, p = 0.2056
+    EnsembleLogit      DUF4229   -1.073 | median   -1.864, max    0.377 |  58 at or above, p = 0.2056
+    ComponentSum       DUF4229    0.379 | median    0.080, max    0.767 |  51 at or above, p = 0.1812
+  DUF4229 against 145 MqnE-neighborhood families
+    Ensemble           DUF4229    0.255 | median    0.220, max    0.982 |  30 at or above, p = 0.2123
+    EnsembleLogit      DUF4229   -1.073 | median   -1.266, max    3.981 |  30 at or above, p = 0.2123
+    ComponentSum       DUF4229    0.379 | median    0.262, max    1.736 |  22 at or above, p = 0.1575
+EvoWeaver, phylogenetic profiles + gene organization
+  control MqnE-MqnC   Ensemble 1.000, component sum 2.955
+  control MqnE-MqnAD  Ensemble 1.000, component sum 3.227
+  control MqnE-Fer4   Ensemble 0.243, component sum 0.467
+  DUF4229 against 286 random Pfam families
+    Ensemble           DUF4229    1.000 | median    0.124, max    0.682 |   0 at or above, p = 0.0035
+    EnsembleLogit      DUF4229   62.740 | median   -1.952, max    0.762 |   0 at or above, p = 0.0035
+    ComponentSum       DUF4229    1.627 | median    0.148, max    1.044 |   0 at or above, p = 0.0035
+    SumWithoutMoransI  DUF4229    1.626 | median    0.145, max    1.041 |   0 at or above, p = 0.0035
+    GeneDistance       DUF4229    0.345 | median    0.000, max    0.007 |   0 at or above, p = 0.0035
+    OrientationMI      DUF4229    0.902 | median    0.043, max    0.423 |   0 at or above, p = 0.0035
+  DUF4229 against 145 MqnE-neighborhood families
+    Ensemble           DUF4229    1.000 | median    0.258, max    1.000 |   7 at or above, p = 0.0548
+    EnsembleLogit      DUF4229   62.740 | median   -1.055, max   79.963 |   1 at or above, p = 0.0137
+    ComponentSum       DUF4229    1.627 | median    0.405, max    2.274 |   1 at or above, p = 0.0137
+    SumWithoutMoransI  DUF4229    1.626 | median    0.399, max    2.233 |   1 at or above, p = 0.0137
+    GeneDistance       DUF4229    0.345 | median    0.001, max    0.451 |   1 at or above, p = 0.0137
+    OrientationMI      DUF4229    0.902 | median    0.114, max    0.735 |   0 at or above, p = 0.0068

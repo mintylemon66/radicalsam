@@ -1,0 +1,411 @@
+[2026-10-17 23:51:25] stage 1: fetch families from UniProt
+101 families to fetch
+  anchor_biotin                ncbifam-TIGR00433       12108 proteomes
+  fam_PF13500                  pfam-PF13500            12507 proteomes
+  anchor_lipoyl                ncbifam-TIGR00510       15186 proteomes
+  fam_PF21948                  pfam-PF21948            16996 proteomes
+  anchor_pqq                   ncbifam-TIGR02109        2844 proteomes
+  fam_PF05402                  pfam-PF05402             6364 proteomes
+  anchor_mycofactocin          ncbifam-TIGR03962         992 proteomes
+  fam_PF26520                  pfam-PF26520              981 proteomes
+  anchor_molybdopterin         ncbifam-TIGR02666       13686 proteomes
+  fam_PF01967                  pfam-PF01967            14658 proteomes
+  anchor_thiamine              ncbifam-TIGR02351        2808 proteomes
+  fam_PF05690                  pfam-PF05690            12182 proteomes
+  anchor_pfl                   ncbifam-TIGR02493        4587 proteomes
+  fam_TIGR01255                ncbifam-TIGR01255        4457 proteomes
+  anchor_queuosine             ncbifam-TIGR03365        1434 proteomes
+  fam_PF06508                  pfam-PF06508             9878 proteomes
+  anchor_futalosine            ncbifam-TIGR03700        2682 proteomes
+  fam_PF02621                  pfam-PF02621             3128 proteomes
+  fam_PF14012                  pfam-PF14012             3373 proteomes
+  fam_PF00202                  pfam-PF00202            17611 proteomes
+  fam_PF00155                  pfam-PF00155            18280 proteomes
+  fam_PF01964                  pfam-PF01964            11865 proteomes
+  fam_PF08543                  pfam-PF08543            16107 proteomes
+  fam_PF02581                  pfam-PF02581            15460 proteomes
+  fam_PF02926                  pfam-PF02926            11117 proteomes
+  fam_PF00586                  pfam-PF00586            17923 proteomes
+  fam_PF02597                  pfam-PF02597            15691 proteomes
+  fam_PF01048                  pfam-PF01048            18104 proteomes
+  fam_PF00994                  pfam-PF00994            16915 proteomes
+  fam_PF02391                  pfam-PF02391            13810 proteomes
+  fam_PF12804                  pfam-PF12804            16398 proteomes
+  fam_PF12706                  pfam-PF12706            16938 proteomes
+  fam_PF03070                  pfam-PF03070             7795 proteomes
+  fam_PF00675                  pfam-PF00675            16586 proteomes
+  fam_PF01070                  pfam-PF01070            12122 proteomes
+  fam_PF02633                  pfam-PF02633             7051 proteomes
+  fam_PF00535                  pfam-PF00535            18221 proteomes
+  fam_PF25601                  pfam-PF25601            12915 proteomes
+  fam_PF01242                  pfam-PF01242            12435 proteomes
+  fam_PF14489                  pfam-PF14489             9078 proteomes
+  fam_PF02901                  pfam-PF02901             5105 proteomes
+  fam_PF06373                  pfam-PF06373                0 proteomes
+  fam_PF30413                  pfam-PF30413              654 proteomes
+  fam_PF17487                  pfam-PF17487                0 proteomes
+  fam_PF30679                  pfam-PF30679                2 proteomes
+  fam_PF03444                  pfam-PF03444             3757 proteomes
+  fam_PF01114                  pfam-PF01114                0 proteomes
+  fam_PF23717                  pfam-PF23717              373 proteomes
+  fam_PF28769                  pfam-PF28769                0 proteomes
+  fam_PF03883                  pfam-PF03883            10651 proteomes
+  fam_PF10322                  pfam-PF10322                1 proteomes
+  fam_PF07596                  pfam-PF07596              164 proteomes
+  fam_PF13494                  pfam-PF13494               12 proteomes
+  fam_PF12028                  pfam-PF12028             3520 proteomes
+  fam_PF23539                  pfam-PF23539             3091 proteomes
+  fam_PF04899                  pfam-PF04899              166 proteomes
+  fam_PF23194                  pfam-PF23194                0 proteomes
+  fam_PF06894                  pfam-PF06894              110 proteomes
+  fam_PF20140                  pfam-PF20140              428 proteomes
+  fam_PF19092                  pfam-PF19092               63 proteomes
+  fam_PF21487                  pfam-PF21487                0 proteomes
+  fam_PF06106                  pfam-PF06106               36 proteomes
+  fam_PF14348                  pfam-PF14348              960 proteomes
+  fam_PF20785                  pfam-PF20785               28 proteomes
+  fam_PF12570                  pfam-PF12570             1129 proteomes
+  fam_PF13802                  pfam-PF13802             6792 proteomes
+  fam_PF30674                  pfam-PF30674                0 proteomes
+  fam_PF16623                  pfam-PF16623                0 proteomes
+  fam_PF06011                  pfam-PF06011                0 proteomes
+  fam_PF07297                  pfam-PF07297                0 proteomes
+  fam_PF00316                  pfam-PF00316             7465 proteomes
+  fam_PF06887                  pfam-PF06887                0 proteomes
+  fam_PF23204                  pfam-PF23204               20 proteomes
+  fam_PF00159                  pfam-PF00159                0 proteomes
+  fam_PF17898                  pfam-PF17898             1093 proteomes
+  fam_PF23160                  pfam-PF23160                0 proteomes
+  fam_PF04357                  pfam-PF04357             9204 proteomes
+  fam_PF28023                  pfam-PF28023              377 proteomes
+  fam_PF28133                  pfam-PF28133                0 proteomes
+  fam_PF05361                  pfam-PF05361                0 proteomes
+  fam_PF00609                  pfam-PF00609                7 proteomes
+  fam_PF25887                  pfam-PF25887              195 proteomes
+  fam_PF11712                  pfam-PF11712                1 proteomes
+  fam_PF27653                  pfam-PF27653                0 proteomes
+  fam_PF24363                  pfam-PF24363              223 proteomes
+  fam_PF27702                  pfam-PF27702                1 proteomes
+  fam_PF23140                  pfam-PF23140              429 proteomes
+  fam_PF06483                  pfam-PF06483              962 proteomes
+  fam_PF31163                  pfam-PF31163             1037 proteomes
+  fam_PF03769                  pfam-PF03769                0 proteomes
+  fam_PF19295                  pfam-PF19295            13640 proteomes
+  fam_PF03136                  pfam-PF03136             3447 proteomes
+  fam_PF06762                  pfam-PF06762             1785 proteomes
+  fam_PF19652                  pfam-PF19652              590 proteomes
+  fam_PF16956                  pfam-PF16956              318 proteomes
+  fam_PF08411                  pfam-PF08411             3180 proteomes
+  fam_PF26754                  pfam-PF26754                0 proteomes
+  fam_PF19584                  pfam-PF19584                0 proteomes
+  fam_PF08892                  pfam-PF08892             1880 proteomes
+  fam_PF17257                  pfam-PF17257                0 proteomes
+  fam_PF22808                  pfam-PF22808                0 proteomes
+
+done, TSVs in _data/evoweaver/genomewide/genes/
+[2026-10-18 01:22:10] stage 2: fetch contig feature tables from NCBI
+biotin: 11001 contigs carry the anchor, 11001 still to fetch
+  biotin: 10/551 batches
+  biotin: 20/551 batches
+  biotin: 30/551 batches
+  biotin: 40/551 batches
+  biotin: 50/551 batches
+  biotin: 60/551 batches
+  biotin: 70/551 batches
+  biotin: 80/551 batches
+  biotin: 90/551 batches
+  biotin: 100/551 batches
+  biotin: 110/551 batches
+  retry 1: IncompleteRead(12940270 bytes read)
+  retry 1: IncompleteRead(4529663 bytes read)
+  biotin: 120/551 batches
+  biotin: 130/551 batches
+  biotin: 140/551 batches
+  biotin: 150/551 batches
+  biotin: 160/551 batches
+  biotin: 170/551 batches
+  biotin: 180/551 batches
+  biotin: 190/551 batches
+  biotin: 200/551 batches
+  biotin: 210/551 batches
+  biotin: 220/551 batches
+  biotin: 230/551 batches
+  biotin: 240/551 batches
+  biotin: 250/551 batches
+  biotin: 260/551 batches
+  biotin: 270/551 batches
+  biotin: 280/551 batches
+  biotin: 290/551 batches
+  biotin: 300/551 batches
+  biotin: 310/551 batches
+  retry 1: HTTP Error 502: Bad Gateway
+  biotin: 320/551 batches
+  biotin: 330/551 batches
+  biotin: 340/551 batches
+  biotin: 350/551 batches
+  biotin: 360/551 batches
+  retry 1: IncompleteRead(244725 bytes read)
+  biotin: 370/551 batches
+  biotin: 380/551 batches
+  biotin: 390/551 batches
+  biotin: 400/551 batches
+  biotin: 410/551 batches
+  biotin: 420/551 batches
+  biotin: 430/551 batches
+  biotin: 440/551 batches
+  biotin: 450/551 batches
+  biotin: 460/551 batches
+  biotin: 470/551 batches
+  biotin: 480/551 batches
+  biotin: 490/551 batches
+  biotin: 500/551 batches
+  biotin: 510/551 batches
+  biotin: 520/551 batches
+  biotin: 530/551 batches
+  biotin: 540/551 batches
+  biotin: 550/551 batches
+  biotin: 551/551 batches
+lipoyl: 13973 contigs carry the anchor, 13973 still to fetch
+  lipoyl: 10/699 batches
+  lipoyl: 20/699 batches
+  lipoyl: 30/699 batches
+  lipoyl: 40/699 batches
+  lipoyl: 50/699 batches
+  lipoyl: 60/699 batches
+  lipoyl: 70/699 batches
+  lipoyl: 80/699 batches
+  lipoyl: 90/699 batches
+  lipoyl: 100/699 batches
+  lipoyl: 110/699 batches
+  lipoyl: 120/699 batches
+  lipoyl: 130/699 batches
+  retry 1: HTTP Error 502: Bad Gateway
+  lipoyl: 140/699 batches
+  lipoyl: 150/699 batches
+  lipoyl: 160/699 batches
+  lipoyl: 170/699 batches
+  lipoyl: 180/699 batches
+  lipoyl: 190/699 batches
+  lipoyl: 200/699 batches
+  lipoyl: 210/699 batches
+  retry 1: IncompleteRead(20517813 bytes read)
+  retry 1: IncompleteRead(16030119 bytes read)
+  lipoyl: 220/699 batches
+  lipoyl: 230/699 batches
+  lipoyl: 240/699 batches
+  lipoyl: 250/699 batches
+  lipoyl: 260/699 batches
+  lipoyl: 270/699 batches
+  lipoyl: 280/699 batches
+  lipoyl: 290/699 batches
+  lipoyl: 300/699 batches
+  lipoyl: 310/699 batches
+  lipoyl: 320/699 batches
+  lipoyl: 330/699 batches
+  lipoyl: 340/699 batches
+  lipoyl: 350/699 batches
+  retry 1: IncompleteRead(999008 bytes read)
+  lipoyl: 360/699 batches
+  lipoyl: 370/699 batches
+  lipoyl: 380/699 batches
+  lipoyl: 390/699 batches
+  lipoyl: 400/699 batches
+  lipoyl: 410/699 batches
+  lipoyl: 420/699 batches
+  lipoyl: 430/699 batches
+  lipoyl: 440/699 batches
+  lipoyl: 450/699 batches
+  lipoyl: 460/699 batches
+  lipoyl: 470/699 batches
+  lipoyl: 480/699 batches
+  lipoyl: 490/699 batches
+  lipoyl: 500/699 batches
+  lipoyl: 510/699 batches
+  lipoyl: 520/699 batches
+  lipoyl: 530/699 batches
+  lipoyl: 540/699 batches
+  lipoyl: 550/699 batches
+  lipoyl: 560/699 batches
+  lipoyl: 570/699 batches
+  lipoyl: 580/699 batches
+  lipoyl: 590/699 batches
+  lipoyl: 600/699 batches
+  lipoyl: 610/699 batches
+  lipoyl: 620/699 batches
+  lipoyl: 630/699 batches
+  lipoyl: 640/699 batches
+  lipoyl: 650/699 batches
+  lipoyl: 660/699 batches
+  lipoyl: 670/699 batches
+  lipoyl: 680/699 batches
+  lipoyl: 690/699 batches
+  lipoyl: 699/699 batches
+pqq: 2708 contigs carry the anchor, 2708 still to fetch
+  pqq: 10/136 batches
+  pqq: 20/136 batches
+  pqq: 30/136 batches
+  pqq: 40/136 batches
+  pqq: 50/136 batches
+  pqq: 60/136 batches
+  pqq: 70/136 batches
+  pqq: 80/136 batches
+  pqq: 90/136 batches
+  pqq: 100/136 batches
+  pqq: 110/136 batches
+  pqq: 120/136 batches
+  retry 1: IncompleteRead(383262 bytes read)
+  retry 1: HTTP Error 502: Bad Gateway
+  pqq: 130/136 batches
+  pqq: 136/136 batches
+mycofactocin: 954 contigs carry the anchor, 954 still to fetch
+  mycofactocin: 10/48 batches
+  mycofactocin: 20/48 batches
+  mycofactocin: 30/48 batches
+  mycofactocin: 40/48 batches
+  mycofactocin: 48/48 batches
+molybdopterin: 13186 contigs carry the anchor, 13186 still to fetch
+  molybdopterin: 10/660 batches
+  molybdopterin: 20/660 batches
+  molybdopterin: 30/660 batches
+  molybdopterin: 40/660 batches
+  molybdopterin: 50/660 batches
+  molybdopterin: 60/660 batches
+  molybdopterin: 70/660 batches
+  molybdopterin: 80/660 batches
+  molybdopterin: 90/660 batches
+  molybdopterin: 100/660 batches
+  molybdopterin: 110/660 batches
+  molybdopterin: 120/660 batches
+  molybdopterin: 130/660 batches
+  molybdopterin: 140/660 batches
+  retry 1: IncompleteRead(17449480 bytes read)
+  molybdopterin: 150/660 batches
+  molybdopterin: 160/660 batches
+  molybdopterin: 170/660 batches
+  molybdopterin: 180/660 batches
+  retry 1: IncompleteRead(19226160 bytes read)
+  molybdopterin: 190/660 batches
+  molybdopterin: 200/660 batches
+  molybdopterin: 210/660 batches
+  molybdopterin: 220/660 batches
+  molybdopterin: 230/660 batches
+  molybdopterin: 240/660 batches
+  molybdopterin: 250/660 batches
+  molybdopterin: 260/660 batches
+  molybdopterin: 270/660 batches
+  molybdopterin: 280/660 batches
+  molybdopterin: 290/660 batches
+  molybdopterin: 300/660 batches
+  molybdopterin: 310/660 batches
+  molybdopterin: 320/660 batches
+  molybdopterin: 330/660 batches
+  molybdopterin: 340/660 batches
+  molybdopterin: 350/660 batches
+  molybdopterin: 360/660 batches
+  molybdopterin: 370/660 batches
+  molybdopterin: 380/660 batches
+  molybdopterin: 390/660 batches
+  molybdopterin: 400/660 batches
+  molybdopterin: 410/660 batches
+  molybdopterin: 420/660 batches
+  molybdopterin: 430/660 batches
+  molybdopterin: 440/660 batches
+  molybdopterin: 450/660 batches
+  molybdopterin: 460/660 batches
+  molybdopterin: 470/660 batches
+  molybdopterin: 480/660 batches
+  molybdopterin: 490/660 batches
+  molybdopterin: 500/660 batches
+  molybdopterin: 510/660 batches
+  molybdopterin: 520/660 batches
+  molybdopterin: 530/660 batches
+  molybdopterin: 540/660 batches
+  molybdopterin: 550/660 batches
+  molybdopterin: 560/660 batches
+  molybdopterin: 570/660 batches
+  molybdopterin: 580/660 batches
+  molybdopterin: 590/660 batches
+  molybdopterin: 600/660 batches
+  molybdopterin: 610/660 batches
+  molybdopterin: 620/660 batches
+  molybdopterin: 630/660 batches
+  molybdopterin: 640/660 batches
+  molybdopterin: 650/660 batches
+  molybdopterin: 660/660 batches
+thiamine: 2575 contigs carry the anchor, 2575 still to fetch
+  thiamine: 10/129 batches
+  thiamine: 20/129 batches
+  thiamine: 30/129 batches
+  thiamine: 40/129 batches
+  thiamine: 50/129 batches
+  thiamine: 60/129 batches
+  thiamine: 70/129 batches
+  thiamine: 80/129 batches
+  thiamine: 90/129 batches
+  thiamine: 100/129 batches
+  thiamine: 110/129 batches
+  thiamine: 120/129 batches
+  thiamine: 129/129 batches
+pfl: 4113 contigs carry the anchor, 4113 still to fetch
+  pfl: 10/206 batches
+  pfl: 20/206 batches
+  pfl: 30/206 batches
+  pfl: 40/206 batches
+  pfl: 50/206 batches
+  pfl: 60/206 batches
+  pfl: 70/206 batches
+  pfl: 80/206 batches
+  pfl: 90/206 batches
+  pfl: 100/206 batches
+  pfl: 110/206 batches
+  pfl: 120/206 batches
+  pfl: 130/206 batches
+  pfl: 140/206 batches
+  pfl: 150/206 batches
+  pfl: 160/206 batches
+  pfl: 170/206 batches
+  pfl: 180/206 batches
+  pfl: 190/206 batches
+  pfl: 200/206 batches
+  pfl: 206/206 batches
+queuosine: 1356 contigs carry the anchor, 1356 still to fetch
+  queuosine: 10/68 batches
+  queuosine: 20/68 batches
+  queuosine: 30/68 batches
+  queuosine: 40/68 batches
+  queuosine: 50/68 batches
+  queuosine: 60/68 batches
+  queuosine: 68/68 batches
+futalosine: 2260 contigs carry the anchor, 2260 still to fetch
+  futalosine: 10/113 batches
+  futalosine: 20/113 batches
+  futalosine: 30/113 batches
+  futalosine: 40/113 batches
+  futalosine: 50/113 batches
+  futalosine: 60/113 batches
+  futalosine: 70/113 batches
+  futalosine: 80/113 batches
+  futalosine: 90/113 batches
+  futalosine: 100/113 batches
+  futalosine: 110/113 batches
+  futalosine: 113/113 batches
+all systems done
+[2026-10-18 03:41:02] stage 3: build EvoWeaver labels and the pair table
+biotin         anchor      0 labels | 3 positives, 39 negatives
+lipoyl         anchor      0 labels | 1 positives, 39 negatives
+pqq            anchor      0 labels | 4 positives, 29 negatives
+mycofactocin   anchor      0 labels | 4 positives, 24 negatives
+molybdopterin  anchor      0 labels | 5 positives, 38 negatives
+thiamine       anchor      0 labels | 7 positives, 32 negatives
+pfl            anchor      0 labels | 1 positives, 34 negatives
+queuosine      anchor      0 labels | 3 positives, 26 negatives
+futalosine     anchor      0 labels | 2 positives, 30 negatives
+
+training set: 28 positives, 261 negatives
+[2026-10-18 03:42:08] stage 4: score, fit the combiner, evaluate, score the held-out system
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+Error in seq_len(l - 1) : 
+  argument must be coercible to non-negative integer
+Calls: predict -> predict.EvoWeaver -> func -> BuildSimMatInternal
+Execution halted

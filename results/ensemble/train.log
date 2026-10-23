@@ -1,0 +1,44 @@
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+biotin         scored 42 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+lipoyl         scored 40 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+pqq            scored 33 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+mycofactocin   scored 28 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+molybdopterin  scored 43 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+thiamine       scored 39 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+pfl            scored 35 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+queuosine      scored 29 candidates
+Disabling Residue and MirrorTree-based algorithms. Input list must include inputs of type "dendrogram" for MT algorithms. Consult the documentation for more info.
+
+futalosine     scored 32 candidates
+
+321 pairs, 7 features: GLMI, GLDistance, PAJaccard, PAOverlap, GeneDistance, MoransI, OrientationMI
+training on 289 pairs (28 positives) across 8 systems
+Warning messages:
+1: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+2: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+3: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+4: glm.fit: algorithm did not converge 
+5: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+6: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+7: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+
+leave-one-system-out AUROC: 0.950
+Error in h(simpleError(msg, call)) : 
+  error in evaluating the argument 'x' in selecting a method for function 'which': error in evaluating the argument 'table' in selecting a method for function '%in%': argument to 'which' is not logical
+Calls: cat ... which -> .handleSimpleError -> h -> .handleSimpleError -> h
+Execution halted
